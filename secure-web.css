@@ -1,0 +1,14 @@
+/*
+.card { ... }	Componente contenedor
+.card .pan {}	Número de tarjeta
+.card .pan .copy-icon {}	Botón para copiar
+.card .name {}	Titular de la tarjeta
+.card .expiration-date {}	Fecha de expiración
+.card .security-code {}	Código de seguridad
+.card .cvv-expiration-time {}	Tiempo de validez para dCVV
+.card .pin {}	Número de Pin
+*/
+
+.card {
+  color: #FFFFFF;
+}
