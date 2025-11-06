@@ -12,3 +12,11 @@
 .card {
   color: #FFFFFF;
 }
+
+.card .pan {
+  color: #FFFFFF;
+}
+
+.card .pan .copy-icon {
+  color: #FFFFFF;
+}
