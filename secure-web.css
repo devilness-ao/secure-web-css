@@ -9,6 +9,24 @@
 .card .pin {}	Número de Pin
 */
 
-.card *:not(.no-color-change) {
-  color: #FFFFFF !important;
+.card .pan {
+  color: #A6AAD0;
+}
+.card .pan .copy-icon {
+  color: #A6AAD0;
+}
+.card .name {
+  color: #A6AAD0;
+}
+.card .expiration-date {
+  color: #A6AAD0;
+}
+.card .security-code {
+  color: #A6AAD0;
+}
+.card .cvv-expiration-time {
+  color: #A6AAD0;
+}
+.card .pin {
+  color: #A6AAD0;
 }
