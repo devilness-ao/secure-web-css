@@ -9,10 +9,10 @@
 .card .pin {}	Número de Pin
 */
 
-.card {
-  color: #FFFFFF;
+.card * {
+  color: #FFFFFF !important;
 }
 
-.card * {
-  color: inherit !important;
+.card .cvv-expiration-time {
+  color: #4a4a4a !important;
 }
