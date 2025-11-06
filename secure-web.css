@@ -10,23 +10,23 @@
 */
 
 .card .pan {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .card .pan .copy-icon {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .card .name {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .card .expiration-date {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .card .security-code {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 .card .cvv-expiration-time {
-  color: #A6AAD0;
+  color: #A6AAD0 !important;
 }
 .card .pin {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
