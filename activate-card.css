@@ -10,8 +10,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 96vh;
-  padding: 16px 0;
+  height: 100vh;
+  padding: 0;
   gap: 16px;
   font-family: 'Inter';
 }
