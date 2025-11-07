@@ -1,111 +1,107 @@
-.card {  
-width: 340px;  
-height: 200px;  
-background: #23245c;  
-border-radius: 16px;  
-padding: 20px;  
-color: #fff;  
-font-family: 'Inter', sans-serif;  
-display: flex;  
-flex-direction: column;  
-justify-content: space-between;  
-position: relative;  
-box-shadow: 0 8px 20px rgba(0,0,0,0.3);  
-overflow: hidden;}/
-*
+.card {
+  width: 340px;
+  height: 200px;
+  background: #23245c;
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
 
- ====== Loo e ícono de marca ====== */.c
-ard::before {  
-content: "";  
-width: 15%;       /* define tamaño visible */  
-height: 20%;  
-background-image: url('Icono-money-giver.svg');  
-background-size: contain;  
-background-repeat: no-repeat;  
-background-position: center;  
-position: absolute;  
-top: 16px;  
-left: 20px;}.
-c
+/* ====== Loo e ícono de marca ====== */
+.card::before {
+  content: "";
+  width: 15%; /* define tamaño visible */
+  height: 20%;
+  background-image: url("Icono-money-giver.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
 
-ard::after {  
-content: ""; /* fa-cc-mastercard */  
-width: 22%;       /* define tamaño visible */  
-height: 20%;  
-background-image: url('Mastercard.svg');  
- background-size: contain;  
-background-repeat: no-repeat;  
-background-position: center;  
-position: absolute;  
-top: 16px;  
-right: 20px;}/
-*
+.card::after {
+  content: ""; /* fa-cc-mastercard */
+  width: 22%; /* define tamaño visible */
+  height: 20%;
+  background-image: url("Mastercard.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
 
- ====== Número de tarjeta ====== */.c
-ard .pan {  
-font-size: 1.2rem;  
-letter-spacing: 2px;  
-margin-top: 60px;  
-display: flex;  
-justify-content: space-between;  
-align-items: center;}.
-c
+/* ====== Número de tarjeta ====== */
+.card .pan {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-ard .pan .copy-icon {  
-font-family: "Font Awesome 6 Free";  
-font-weight: 400;  
-content: "\f0c5d";  
-font-size: 1.rem;  
-color: #9ba3ff;  
-cursor: pointer;  
-transition: color 0.3s;}.
-c
+.card .pan .copy-icon {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f0c5d";
+  font-size: 1rem;
+  color: #9ba3ff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
 
-ard .pan .copy-icon:hover {  
-color: #fff;}/
-*
+.card .pan .copy-icon:hover {
+  color: #fff;
+}
 
- ====== Titular ====== */.c
-ard .name {  
-font-size: 0.9rem;  
-font-weight: 500;  
-margin-top: 6px;}/
-*
-
- ====== Fecha y CVV ====== */.c
-ard .cvv-expiration-time {  
-display: flex;  
-gap: 24px;  
-margin-top: 8px;}.
-c
-
-ard .expiration-date,.c
-ard .security-code {  
-font-size: 0.8rem;  
-opacity: 0.9;}/
-*
-
- ====== Chip ====== */.c
-ard::marker,.c
-ard .chip {  
-content: "";  
-width: 15%;       /* define tamaño visible */  
-height: 20%;  
-background-image: url('Icono-money-giver.svg');  
-background-size: contain;  
-background-repeat: no-repeat;  
-background-position: center;  
-position: absolute;  
-bottom: 24px;  
-right: 28px;  
-}/
-*
-
- ====== PIN ====== */.c
-ard .pin {  
-position: absolute;  
-bottom: 8px;  
-right: 24px;  
-font-size: 0.8rem;  
-color: #9ba3ff;  
-letter-spacing: 2px;}
+/* ====== Titular ====== */
+.card .name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+/* ====== Fecha y CVV ====== */
+.card .cvv-expiration-time {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+.card .expiration-date,
+.card .security-code {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+/* ====== Chip ====== */
+.card::marker,
+.card .chip {
+  content: "";
+  width: 15%; /* define tamaño visible */
+  height: 20%;
+  background-image: url("Icono-money-giver.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+}
+/* ====== PIN ====== */
+.card .pin {
+  position: absolute;
+  bottom: 8px;
+  right: 24px;
+  font-size: 0.8rem;
+  color: #9ba3ff;
+  letter-spacing: 2px;
+}
