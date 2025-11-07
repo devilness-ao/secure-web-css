@@ -18,6 +18,7 @@
 
 .activation-form .pan-input,
 .activation-form .pin-input {
+  text-align: start !important;
   width: 100%;
   margin: 0;
   padding: 16px;
