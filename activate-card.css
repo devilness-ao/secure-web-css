@@ -18,12 +18,12 @@
 
 .activation-form .pan-input,
 .activation-form .pin-input {
-  text-align: start;
+  text-align: start !important;
   width: 100%;
   margin: 0;
   padding: 16px;
   border: 0;
-  border-bottom: 1px solid #2E305D;
+  border-bottom: 1px solid #2E305D !important;
   border-radius: 0;
   outline: none;
   font-size: 16px;
@@ -34,7 +34,7 @@
 
 .activation-form .pan-input:focus,
 .activation-form .pin-input:focus {
-  border-bottom: 2px solid #2E305D;
+  border-bottom: 2px solid #2E305D !important;
 }
 
 .activation-form .error-field {
