@@ -21,6 +21,7 @@
   width: 100%;
   margin: 0;
   padding: 16px;
+  border: 0;
   border-bottom: 2px solid #000000;
   border-radius: 8px;
   outline: none;
@@ -31,7 +32,7 @@
 }
 
 .activation-form .pan-input:focus,
-.activation-form .pin-input:focus{
+.activation-form .pin-input:focus {
   border-bottom: 4px solid #2E305D;
 }
 
