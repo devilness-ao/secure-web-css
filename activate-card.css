@@ -43,9 +43,10 @@
 }
 
 .activation-form .submit-button {
-  background: none;
+  background-color: #138C3D;
+  color: #ffffff;
   border: none;
-  color: #e91e63;
+  border-radius: 8px;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
