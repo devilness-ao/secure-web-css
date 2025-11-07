@@ -1,107 +1,138 @@
+/* === TARJETA === */
 .card {
-  width: 340px;
-  height: 200px;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1.7 / 1; /* mantiene proporción visual */
   background: #23245c;
   border-radius: 16px;
-  padding: 20px;
-  color: #fff;
-  font-family: "Inter", sans-serif;
+  padding: 1.5rem;
+  color: #fff !important;
+  font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   overflow: hidden;
 }
 
-/* ====== Loo e ícono de marca ====== */
+/* === Logo izquierdo === */
 .card::before {
   content: "";
-  width: 15%; /* define tamaño visible */
+  width: 15%;
   height: 20%;
-  background-image: url("Icono-money-giver.svg");
+  background-image: url('Icono-money-giver.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 16px;
-  left: 20px;
+  top: 6%;
+  left: 6%;
 }
 
+/* === Logo derecho (Mastercard) === */
 .card::after {
-  content: ""; /* fa-cc-mastercard */
-  width: 22%; /* define tamaño visible */
+  content: "";
+  width: 22%;
   height: 20%;
-  background-image: url("Mastercard.svg");
+  background-image: url('https://www.logo.wine/a/logo/Mastercard/Mastercard-Logo.wine.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 6%;
+  right: 6%;
 }
 
-/* ====== Número de tarjeta ====== */
+/* === Número de tarjeta === */
 .card .pan {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 2px;
-  margin-top: 60px;
+  margin-top: 25%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .card .pan .copy-icon {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 400;
-  content: "\f0c5d";
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #9ba3ff;
   cursor: pointer;
   transition: color 0.3s;
+  right: 8%;
 }
+
 
 .card .pan .copy-icon:hover {
   color: #fff;
 }
 
-/* ====== Titular ====== */
+/* === Titular === */
 .card .name {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 500;
   margin-top: 6px;
+  word-break: break-word;
 }
-/* ====== Fecha y CVV ====== */
+
+/* === Fecha y CVV === */
 .card .cvv-expiration-time {
   display: flex;
-  gap: 24px;
+  gap: 12%;
   margin-top: 8px;
 }
+
 .card .expiration-date,
 .card .security-code {
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
   opacity: 0.9;
 }
-/* ====== Chip ====== */
-.card::marker,
+
+/* === Chip === */
 .card .chip {
-  content: "";
-  width: 15%; /* define tamaño visible */
-  height: 20%;
-  background-image: url("Icono-money-giver.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   position: absolute;
-  bottom: 24px;
-  right: 28px;
+  bottom: 30%;
+  right: 8%;
+  width: 50px;
+  height: 36px;
+  background-image: url('card_chip.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-/* ====== PIN ====== */
+
+/* === PIN === */
 .card .pin {
   position: absolute;
-  bottom: 8px;
-  right: 24px;
-  font-size: 0.8rem;
+  bottom: 10%;
+  right: 8%;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   color: #9ba3ff;
   letter-spacing: 2px;
+}
+
+/* === RESPONSIVE: móviles === */
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .card::before,
+  .card::after {
+    width: 18%;
+    height: 18%;
+  }
+
+  .card .chip {
+    width: 40px;
+    height: 28px;
+  }
+
+  .card .pan {
+    margin-top: 30%;
+  }
+
+  .card .name {
+    font-size: 0.9rem;
+  }
 }
