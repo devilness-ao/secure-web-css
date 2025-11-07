@@ -46,6 +46,7 @@
 
 /* === Número de tarjeta === */
 .card .pan {
+  color: #fff !important;
   font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 2px;
   margin-top: 25%;
@@ -55,6 +56,7 @@
 }
 
 .card .pan .copy-icon {
+  color: #fff !important;
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: #9ba3ff;
   cursor: pointer;
@@ -69,6 +71,7 @@
 
 /* === Titular === */
 .card .name {
+  color: #fff !important;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 500;
   margin-top: 6px;
