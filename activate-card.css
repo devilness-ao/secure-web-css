@@ -33,8 +33,7 @@
 }
 
 .activation-form .error-field {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
   text-align: center;
   background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
   -webkit-background-clip: text;
