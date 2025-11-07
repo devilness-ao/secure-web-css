@@ -18,7 +18,7 @@
 .activation-form .pin-input {
   width: 100%;
   max-width: 400px;
-  padding: 12px 16px;
+  padding: 16px;
   border: 1.5px solid #ccc;
   border-radius: 8px;
   outline: none;
@@ -45,10 +45,12 @@
 .activation-form .submit-button {
   background-color: #138C3D;
   color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
   border: none;
   border-radius: 8px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
