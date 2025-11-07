@@ -30,7 +30,8 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.activation-form .pan-input:focus {
+.activation-form .pan-input:focus,
+.activation-form .pin-input:focus{
   border-bottom: 4px solid #2E305D;
 }
 
