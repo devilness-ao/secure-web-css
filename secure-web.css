@@ -1,12 +1,12 @@
 /* === TARJETA === */
 .card {
+  color: #fff !important;
   width: 100%;
   max-width: 400px;
   aspect-ratio: 1.7 / 1; /* mantiene proporción visual */
   background: #23245c;
   border-radius: 16px;
   padding: 1.5rem;
-  color: #fff !important;
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
 
 
 .card .pan .copy-icon:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 /* === Titular === */
@@ -105,11 +105,11 @@
 
 /* === PIN === */
 .card .pin {
+  color: #9ba3ff;
   position: absolute;
   bottom: 10%;
   right: 8%;
   font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  color: #9ba3ff;
   letter-spacing: 2px;
 }
 
