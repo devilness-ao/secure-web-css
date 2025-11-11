@@ -1,141 +1,126 @@
+/*
+.card {}	Componente contenedor
+.card .pan {}	Número de tarjeta
+.card .pan .copy-icon {}	Botón para copiar
+.card .name {}	Titular de la tarjeta
+.card .expiration-date {}	Fecha de expiración
+.card .security-code {}	Código de seguridad
+.card .cvv_expiration_time {}	Tiempo de validez para dCVV
+.card .pin {}	Número de PIN
+*/
+
 /* === TARJETA === */
 .card {
-  color: #fff !important;
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 1.7 / 1; /* mantiene proporción visual */
-  background: #23245c;
-  border-radius: 16px;
-  padding: 1.5rem;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  overflow: hidden;
+	width: 100%;
+	max-width: 100vw;
+	height: auto; /* libera la altura para que la calcule aspect-ratio */
+	max-height: 100vh; /* evita tope que deforme */
+	aspect-ratio: 1.7 / 1; /* mantiene proporción visual */
+	background: #23245c;
+	border-radius: 2rem;
+	color: #ffffff !important;
+	font-family: 'Inter', sans-serif;
+	box-shadow: none;
+	overflow: hidden;
 }
 
-/* === Logo izquierdo === */
+/* === Logos === */
 .card::before {
-  content: "";
-  width: 15%;
-  height: 20%;
-  background-image: url('Icono-money-giver.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 6%;
-  left: 6%;
-}
-
-/* === Logo derecho (Mastercard) === */
-.card::after {
-  content: "";
-  width: 22%;
-  height: 20%;
-  background-image: url('https://www.logo.wine/a/logo/Mastercard/Mastercard-Logo.wine.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 6%;
-  right: 6%;
+	content: '';
+	position: absolute;
+	inset: 0; /* top:0; right:0; bottom:0; left:0 */
+	pointer-events: none; /* que no bloquee clicks */
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-image: url('https://prod.moneygiver.xyz/documents/Icono-money-giver.svg'),
+		/* izq/arriba */ url('https://prod.moneygiver.xyz/documents/Mastercard.svg'),
+		/* der/arriba */ url('https://prod.moneygiver.xyz/documents/card_chip.png'); /* der/abajo */
+	background-size: 10% 20%, 22% 20%, 7% 10%;
+	background-position: 8% 10%, right 4% top 10%, right 8% bottom 10%;
 }
 
 /* === Número de tarjeta === */
 .card .pan {
-  color: #fff !important;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  letter-spacing: 2px;
-  margin-top: 25%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	font-size: clamp(1.1rem, 2vw, 1.5rem);
+	letter-spacing: 2px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: inherit;
+	margin: 0;
 }
 
 .card .pan .copy-icon {
-  color: #fff !important;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #9ba3ff;
-  cursor: pointer;
-  transition: color 0.3s;
-  right: 8%;
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	color: #9ba3ff;
+	cursor: pointer;
+	transition: color 0.3s;
 }
 
-
 .card .pan .copy-icon:hover {
-  color: #fff !important;
+	color: #fff;
 }
 
 /* === Titular === */
 .card .name {
-  color: #fff !important;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  font-weight: 500;
-  margin-top: 6px;
-  word-break: break-word;
+	font-size: clamp(0.9rem, 2vw, 1.1rem);
+	font-weight: 500;
+	word-break: break-word;
+	color: inherit;
+	margin: 0 0 0.5rem 0;
 }
 
 /* === Fecha y CVV === */
+.card .exp-code-container {
+	justify-content: flex-start;
+	gap: 1rem;
+	align-items: flex-start;
+	padding-bottom: 2rem;
+}
+
 .card .cvv-expiration-time {
-  display: flex;
-  gap: 12%;
-  margin-top: 8px;
+	display: flex;
+	gap: 0.65rem;
+	color: inherit;
+	margin: 0 0 0 1.2rem;
 }
 
 .card .expiration-date,
 .card .security-code {
-  font-size: clamp(0.8rem, 1.8vw, 1rem);
-  opacity: 0.9;
-}
-
-/* === Chip === */
-.card .chip {
-  position: absolute;
-  bottom: 30%;
-  right: 8%;
-  width: 50px;
-  height: 36px;
-  background-image: url('card_chip.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+	opacity: 0.9;
+	color: inherit;
 }
 
 /* === PIN === */
 .card .pin {
-  color: #9ba3ff;
-  position: absolute;
-  bottom: 10%;
-  right: 8%;
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  letter-spacing: 2px;
+	justify-content: flex-start;
+	color: inherit;
+}
+
+.card .pin::before {
+	content: 'PIN:';
+	padding-right: 0.3rem;
 }
 
 /* === RESPONSIVE: móviles === */
-@media (max-width: 480px) {
-  .card {
-    padding: 1rem;
-    border-radius: 12px;
-  }
+@media (max-width: 220px) {
+	.card .pan {
+		font-size: 0.8rem;
+	}
 
-  .card::before,
-  .card::after {
-    width: 18%;
-    height: 18%;
-  }
+	.card .pan .copy-icon {
+		font-size: clamp(1rem, 2vw, 1.2rem);
+		color: #9ba3ff;
+		cursor: pointer;
+		transition: color 0.3s;
+	}
 
-  .card .chip {
-    width: 40px;
-    height: 28px;
-  }
+	.card .name {
+		font-size: 0.7rem;
+	}
 
-  .card .pan {
-    margin-top: 30%;
-  }
-
-  .card .name {
-    font-size: 0.9rem;
-  }
+	.card .expiration-date,
+	.card .security-code,
+	.card .cvv-expiration-time {
+		font-size: 0.75rem;
+	}
 }
